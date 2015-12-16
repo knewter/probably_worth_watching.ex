@@ -11,3 +11,9 @@ of Twitter users.
 The pipeline we're building is as follows:
 
 ![ProbablyWorthWatching pipeline](./probably_worth_watching.png)
+
+To generate this png from the dotfile, run the following:
+
+```sh
+make png
+```
