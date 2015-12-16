@@ -1,0 +1,51 @@
+digraph probably_worth_watching {
+  rankdir=LR;
+  node [shape = box];
+
+  tweets_elixir -> has_link;
+  tweets_ruby -> has_link;
+  tweets_javascript -> has_link;
+  has_link -> has_video -> decorate_video;
+
+  tweets_elixir -> count_7d_elixir;
+  tweets_ruby -> count_7d_ruby;
+  tweets_javascript -> count_7d_javascript;
+  has_link -> count_7d_has_link;
+  has_video -> count_7d_has_video;
+  decorate_video -> count_7d_decorate_video;
+
+  count_7d_elixir [label="count(1_week)"];
+  count_7d_ruby [label="count(1_week)"];
+  count_7d_javascript [label="count(1_week)"];
+  count_7d_has_link [label="count(1_week)"];
+  count_7d_has_video [label="count(1_week)"];
+  count_7d_decorate_video [label="count(1_week)"];
+
+  {
+    rank = same;
+    tweets_elixir;
+    tweets_ruby;
+    tweets_javascript;
+    count_7d_elixir;
+    count_7d_ruby;
+    count_7d_javascript;
+  }
+
+  {
+    rank = same;
+    has_link;
+    count_7d_has_link;
+  }
+
+  {
+    rank = same;
+    has_video;
+    count_7d_has_video;
+  }
+
+  {
+    rank = same;
+    decorate_video;
+    count_7d_decorate_video;
+  }
+}
