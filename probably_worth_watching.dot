@@ -14,6 +14,9 @@ digraph probably_worth_watching {
   has_video -> count_7d_has_video;
   decorate_video -> count_7d_decorate_video;
 
+  tweets_elixir [label="tweets(\"elixir\")"];
+  tweets_ruby [label="tweets(\"ruby\")"];
+  tweets_javascript [label="tweets(\"javascript\")"];
   count_7d_elixir [label="count(1_week)"];
   count_7d_ruby [label="count(1_week)"];
   count_7d_javascript [label="count(1_week)"];
