@@ -27,6 +27,9 @@ defmodule ProbablyWorthWatching.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [
+      {:extwitter, "~> 0.5.5"},
+      {:oauth, github: "tim/erlang-oauth"}
+    ]
   end
 end
