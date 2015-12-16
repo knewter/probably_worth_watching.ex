@@ -1,19 +1,13 @@
 # ProbablyWorthWatching
 
-**TODO: Add description**
+This is a tool for executing a pipeline topology.  Specifically, it streams
+tweets through a pipeline to extract videos greater than 5 minutes long that are
+linked to from a given twitter search, tracking provenance of the search, so
+that it can produce an API endpoint for the latest videos from a given 'topic'
+of Twitter users.
 
-## Installation
+## Layout
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
+The pipeline we're building is as follows:
 
-  1. Add probably_worth_watching to your list of dependencies in `mix.exs`:
-
-        def deps do
-          [{:probably_worth_watching, "~> 0.0.1"}]
-        end
-
-  2. Ensure probably_worth_watching is started before your application:
-
-        def application do
-          [applications: [:probably_worth_watching]]
-        end
+![ProbablyWorthWatching pipeline](./probably_worth_watching.png)
